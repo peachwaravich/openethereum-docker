@@ -9,6 +9,7 @@ services:
     command:
       --chain ${CHAIN}
       --jsonrpc-interface all
+      --jsonrpc-apis all 
       --jsonrpc-cors all
       --jsonrpc-hosts all
     ports:
