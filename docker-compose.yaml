@@ -1,0 +1,15 @@
+version: '2.1'
+services:
+  ethtestnet:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes: 
+      - openethereum-data:/home/openethereum/.local/share/io.parity.ethereum/chains/${CHAIN}/db
+    command:
+      --chain ${CHAIN}
+    ports:
+      - 8541:8545
+      - 30303:30303
+volumes:
+  openethereum-data:
