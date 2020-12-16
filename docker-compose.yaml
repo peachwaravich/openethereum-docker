@@ -8,9 +8,6 @@ services:
       - openethereum-data:/home/openethereum/.local/share/io.parity.ethereum/chains/${CHAIN}/db
     command:
       --chain ${CHAIN}
-      --rpcaddr=0.0.0.0
-      --rpcapi="db,eth,net,web3,personal,parity"
-      --rpccorsdomain "*"
       --jsonrpc-port 8541
       --jsonrpc-hosts all
     ports:
