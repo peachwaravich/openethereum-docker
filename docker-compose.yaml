@@ -8,8 +8,9 @@ services:
       - openethereum-data:/home/openethereum/.local/share/io.parity.ethereum/chains/${CHAIN}/db
     command:
       --chain ${CHAIN}
-      --jsonrpc-cors ${IP}
-      --jsonrpc-hosts ${IP}
+      --jsonrpc-interface all
+      --jsonrpc-cors all
+      --jsonrpc-hosts all
     ports:
       - 8541:8545
       - 30303:30303
